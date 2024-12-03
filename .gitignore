@@ -1,0 +1,7 @@
+node_mod/home/user/projects/admconnectorules/
+dist/
+.scp/
+.env
+
+# auto generated wildcard
+Consolidacao/consolidacao/consolidacao/.env1

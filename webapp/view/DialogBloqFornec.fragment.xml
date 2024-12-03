@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog id="List" title="BloqueadasTeste" class="sapUiPopupWithPadding" 
+    items="{ path:'/UfBloqueada' ,
+        parameters:{
+            $apply:'groupby((bloqueada))'
+			}}" search="_handleValueHelpSearchBloq"
+		confirm="_handleValueHelpCloseBloqFornec" cancel="_handleValueHelpCloseBloqFornec" resizable="true" draggable="true" growing="true" growingThreshold="100">
+		<StandardListItem iconDensityAware="false" iconInset="false" title="{bloqueada}"/>
+	</SelectDialog>
+</core:FragmentDefinition>
