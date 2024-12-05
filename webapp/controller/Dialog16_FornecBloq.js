@@ -236,10 +236,16 @@ sap.ui.define([
                     }
                 }
                 if (exists == false) {
+                    var valueBloq;
+                    if(this.getView().byId("bloqueado").getValue() == "Yes" ||this.getView().byId("bloqueado").getValue() == "Sim" ){
+                        valueBloq = true;
+                    }else{
+                        valueBloq = false;
+                    }
                     var oContext = oBinding.create({
                         "fornecedor": this.getView().byId("fornecedor").getValue(),
                         "descricao": this.getView().byId("descricao").getValue(),
-                        "bloqueado": this.getView().byId("bloqueado").getValue() == "Yes" ? true : false
+                        "bloqueado": valueBloq
                     });
                     var that = this;
 
