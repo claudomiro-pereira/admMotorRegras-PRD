@@ -139,6 +139,14 @@ sap.ui.define([
             this.inputId = oEvent.getSource().getId();
             // cria o value help dialog
             if (!this.DialogBloqFornec) {
+
+                var oModel2 = new sap.ui.model.json.JSONModel({
+                    Bloqueadas: [
+                        { Nome: "Sim" },
+                        { Nome: "Não" }
+                    ]
+                });
+                this.getView().setModel(oModel);
                 this.DialogBloqFornec = this.DialogBloqFornec = sap.ui.xmlfragment(
                     "DialogBloqFornec",
                     "com.sap.build.standard.adminEngine.view.DialogBloqFornec",
@@ -146,10 +154,10 @@ sap.ui.define([
                 );
                 //to get access to the global model
                 this.getView().addDependent(this.DialogBloqFornec);
-                sap.ui.core.Fragment.byId("DialogBloqFornec", "List").setModel(oModel);
+                sap.ui.core.Fragment.byId("DialogBloqFornec", "Listt").setModel(oModel2);
             } else {
                 var aFilters = []
-                var oBind = sap.ui.core.Fragment.byId("DialogBloqFornec", "List").getBinding("items");
+                var oBind = sap.ui.core.Fragment.byId("DialogBloqFornec", "Listt").getBinding("items");
                 oBind.sOperationMode = sap.ui.model.odata.OperationMode.Server;
                 oBind.filter(aFilters, sap.ui.model.FilterType.Application);
             }
@@ -197,7 +205,7 @@ sap.ui.define([
                 and: false
             })
             //var FilterdescricaoOs = new sap.ui.model.Filter("descricaoOs", sap.ui.model.FilterOperator.Contains, sValue);
-            var oBind = sap.ui.core.Fragment.byId("DialogBloqFornec ", "List").getBinding("items");
+            var oBind = sap.ui.core.Fragment.byId("DialogBloqFornec ", "Listt").getBinding("items");
             oBind.sOperationMode = sap.ui.model.odata.OperationMode.Server;
             oBind.filter(filter, sap.ui.model.FilterType.Application);
             //evt.getSource().getBinding("items").filter([FilterdescricaoOs]);

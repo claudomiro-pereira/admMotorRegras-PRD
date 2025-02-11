@@ -565,7 +565,6 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
                     aFilters.push(oFilter);
                 });
             }
-
            /* if (this.customFornecFilter) {
                 this.customFornecFilter.forEach((descricao) => {
                     // @ts-ignore
@@ -612,7 +611,6 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
                 items[i].getCells()[2].setSelected(seleciona)
             }        
 		},
-
         onSelectionChangeFornec: function (oEvent) {
             var bSelected = oEvent.getParameter('selected');
 

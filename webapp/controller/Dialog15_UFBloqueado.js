@@ -168,6 +168,15 @@ sap.ui.define([
             this.inputId = oEvent.getSource().getId();
             // cria o value help dialog
             if (!this.DialogUF_Bloqueado) {
+
+                var oModel2 = new sap.ui.model.json.JSONModel({
+                    Bloqueadas: [
+                        { Nome: "Sim" },
+                        { Nome: "Não" }
+                    ]
+                });
+
+                this.getView().setModel(oModel);
                 this.DialogUF_Bloqueado = this.DialogUF_Bloqueado = sap.ui.xmlfragment(
                     "DialogUF_Bloqueado",
                     "com.sap.build.standard.adminEngine.view.DialogUF_Bloqueado",
@@ -175,10 +184,10 @@ sap.ui.define([
                 );
                 //to get access to the global model
                 this.getView().addDependent(this.DialogUF_Bloqueado);
-                sap.ui.core.Fragment.byId("DialogUF_Bloqueado", "List").setModel(oModel);
+                sap.ui.core.Fragment.byId("DialogUF_Bloqueado", "Listtt").setModel(oModel2);
             } else {
                 var aFilters = []
-                var oBind = sap.ui.core.Fragment.byId("DialogUF_Bloqueado", "List").getBinding("items");
+                var oBind = sap.ui.core.Fragment.byId("DialogUF_Bloqueado", "Listtt").getBinding("items");
                 oBind.sOperationMode = sap.ui.model.odata.OperationMode.Server;
                 oBind.filter(aFilters, sap.ui.model.FilterType.Application);
             }

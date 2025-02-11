@@ -550,6 +550,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
                 emphasizedAction: MessageBox.Action.OK,
                 onClose: function (sAction) {
                     if (sAction == "OK") {
+                        setTimeout(() => {
                         var oGlobalBusyDialog = new sap.m.BusyDialog();
                         oGlobalBusyDialog.open();
                         var oModel = that.getView().getModel();
@@ -562,7 +563,8 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
                                 aFilters = [];
                             oBinding.sOperationMode = sap.ui.model.odata.OperationMode.Server;
                             oBinding.filter(aFilters);
-                        });
+                            });
+                        }, "1000");
                     }
                 }
             });
@@ -885,14 +887,8 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
                     sap.m.MessageBox.Icon.ERROR,
                     "Erro ao Atualizar a pagina."
                 );
-				return;
 			}
 			oBinding.refresh();
-            sap.m.MessageBox.show(
-                "Dados atualizados com sucesso",
-                sap.m.MessageBox.Icon.SUCCESS,
-                "Dados gravados!"
-            );
 		},
 
         onParentClicked: function (oEvent) {

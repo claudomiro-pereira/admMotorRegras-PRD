@@ -267,6 +267,13 @@
                     "viewId": "DetailPage8_fornec",
                     "viewLevel": 17,
                     "transition": "slide"
+                },
+                "DetailCadastroToa": {
+                    "controlAggregation": "detailPages",
+                    "viewName": "DetailCadastroToa",
+                    "viewId": "DetailCadastroToa",
+                    "viewLevel": 18,
+                    "transition": "slide"
                 }
             },
             "routes": [
@@ -436,6 +443,14 @@
                     "target": [
                         "MasterPage1",
                         "DetailPage8_fornec"
+                    ]
+                },
+                {
+                    "pattern": "MasterPage1/DetailCadastroToa",
+                    "name": "DetailCadastroToa",
+                    "target": [
+                        "MasterPage1",
+                        "DetailCadastroToa"
                     ]
                 },
                 {

@@ -1,0 +1,117 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" controllerName="com.sap.build.standard.adminEngine.controller.Dialog17_CadastroToa" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+    <Dialog horizontalScrolling="true" showHeader="true" state="None" stretch="false" title="Adicionar Cadastro TOA" type="Standard" verticalScrolling="true">
+        <content>
+            <form:Form width="100%" editable="true" visible="true">
+                <form:title/>
+                <form:formContainers>
+                    <form:FormContainer visible="true">
+                        <form:formElements>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                            </form:FormElement>
+                           <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="fornecedorr" placeholder="Fornecedor" showValueHelp="true" valueHelpRequest="handleValueHelpFornecCadToa" valueHelpOnly="true"/>
+                                </form:fields>
+                            </form:FormElement>
+                                <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="loginTecnico" placeholder="Login Tecnico" showValueHelp="true" valueHelpRequest="handleValueHelpLoginTecCadToa" valueHelpOnly="true"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="grupo" placeholder="Grupo" showValueHelp="false" valueHelpRequest="handleValueHelpGrupoCadToa" valueHelpOnly="false"/>
+                                </form:fields>
+                            </form:FormElement>
+							 <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="cluster" placeholder="Cluster" showValueHelp="false" valueHelpRequest="handleValueHelpClusterCadToa" valueHelpOnly="false"/>
+                                </form:fields>
+                            </form:FormElement>
+							 <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="subCluster" placeholder="Subcluster" showValueHelp="true" valueHelpRequest="handleValueHelpSubClusterCadToa" valueHelpOnly="true"/>
+                                </form:fields>
+                            </form:FormElement>
+							 <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="municipioo" placeholder="Municpio" showValueHelp="true" valueHelpRequest="handleValueHelpMunicipioCadToa" valueHelpOnly="true"/>
+                                </form:fields>
+                            </form:FormElement>
+							 <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="uff" placeholder="UF" showValueHelp="false" valueHelpRequest="handleValueHelpUFCadToa" valueHelpOnly="false" liveChange="onLiveChangeUF"/>
+                                </form:fields>
+                            </form:FormElement>
+							 <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="segMunicipio" placeholder="Segmento do Município" showValueHelp="false" valueHelpRequest="handleValueHelpSegMunicipCadToa" valueHelpOnly="false"/>
+                                </form:fields>
+                            </form:FormElement>
+							 <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="grupoServicos" placeholder="Grupo de Serviços" showValueHelp="false" valueHelpRequest="handleValueHelpBloqFornec" valueHelpOnly="false"/>
+                                </form:fields>
+                            </form:FormElement>
+								 <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                                <form:fields>
+                                     <Input id="unidadeNegocio" placeholder="Unidade Negócio" showValueHelp="false" valueHelpRequest="handleValueHelpUnidNegocCadToa" valueHelpOnly="false"/>
+                                </form:fields>
+                            </form:FormElement>
+								 <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="false"/>
+                                </form:label>
+                            </form:FormElement>
+                        </form:formElements>
+                        <form:title/>
+                    </form:FormContainer>
+                </form:formContainers>
+                <form:layout>
+                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                </form:layout>
+            </form:Form>
+        </content>
+        <beginButton/>
+        <buttons>
+            <Button text="OK" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="onCreate"/>
+            <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+        </buttons>
+        <customHeader/>
+        <endButton/>
+        <subHeader/>
+    </Dialog>
+</core:FragmentDefinition>

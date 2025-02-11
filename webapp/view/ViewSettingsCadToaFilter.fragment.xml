@@ -1,0 +1,177 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <ViewSettingsDialog confirm="handleFilterDialogConfirm" resetFilters="onResetFilters">
+        <filterItems>
+
+            <ViewSettingsCustomItem id="customDescrGrupoCadToa" text="Grupo" key="grupo">
+                <customControl>
+                     <List id="DescrGrupoCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((grupo))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeGrupoCadToa">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchGrupoCadToa" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{grupo}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem> 
+
+                 <ViewSettingsCustomItem id="customDescrClusterCadToa" text="Cluster" key="cluster">
+                <customControl>
+                     <List id="DescrClusterToaCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((cluster))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeCluster">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchDescrCadCluster" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{cluster}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem>
+
+                  <ViewSettingsCustomItem id="customDescrSubClusterCadToa" text="SubCluster" key="subCluster">
+                <customControl>
+                     <List id="DescrSubClusterToaCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((subCluster))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeSubCluster">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchDescrCadSubCluster" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{subCluster}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem>
+
+                <ViewSettingsCustomItem id="customDescrMunicipioCadToa" text="Município" key="municipio">
+                <customControl>
+                     <List id="DescrMunicipioToaCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((municipio))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeMunicipio">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchDescrCadMunicipio" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{municipio}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem>
+
+               <ViewSettingsCustomItem id="customDescrUfCadToa" text="UF" key="uf">
+                <customControl>
+                     <List id="DescrUfCadToaCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((uf))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeCadToaUf">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchDescrCadToaUf" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{uf}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem>
+
+                <ViewSettingsCustomItem id="customDescrsegMunicCadToa" text="Segmento do Município" key="segMunicipio">
+                <customControl>
+                     <List id="DescrsegMunicCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((segMunicipio))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeSegMunic">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchsegMunicCadToa" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{segMunicipio}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem>
+
+                        <ViewSettingsCustomItem id="customDescrGrupoServCadToa" text="Grupo de Serviços" key="grupoServicos">
+                <customControl>
+                     <List id="DescrGrupoServCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((grupoServicos))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeGrupoServ">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchGrupoServCadToa" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{grupoServicos}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem> 
+
+             <ViewSettingsCustomItem id="customDescrFornecCadToa" text="Fornecedor" key="fornecedor">
+                <customControl>
+                     <List id="DescrFornecCadToaCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((fornecedor))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeFornec">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchDescrCadToaFornec" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{fornecedor}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem>
+
+             <ViewSettingsCustomItem id="customDescrUnidNegocCadToa" text="Unidade Negócio" key="unidadeNegocio">
+                <customControl>
+                     <List id="DescrUnidNegocCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((unidadeNegocio))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeUnidNegoc">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchUnidNegocCadToa" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{unidadeNegocio}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem>   
+
+            <ViewSettingsCustomItem id="customDescrLogTecCadToa" text="Login Técnico" key="loginTecnico">
+                <customControl>
+                     <List id="DescrLogTecCadToaCustomList" 
+                            items="{ path: '/CadastroFiltrosTOA' ,
+								parameters: {
+                                    $apply: 'groupby((loginTecnico))'
+								} }"  growing="true" growingThreshold="40" growingScrollToLoad="true" mode="MultiSelect" selectionChange=".onSelectionChangeLogTec">
+                        <infoToolbar>
+                            <OverflowToolbar visible="true">
+                                <SearchField liveChange=".onSearchDescrCadToaLogTec" width="100%" />
+                            </OverflowToolbar>
+                        </infoToolbar>
+                        <StandardListItem title="{loginTecnico}"/>
+                    </List>
+                </customControl>
+            </ViewSettingsCustomItem>
+        </filterItems>
+    </ViewSettingsDialog>
+</core:FragmentDefinition>

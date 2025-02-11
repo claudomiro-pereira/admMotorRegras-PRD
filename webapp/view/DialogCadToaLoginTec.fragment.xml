@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog id="List" title="Login Técnico" class="sapUiPopupWithPadding" items="{ path: '/TecnicoPorEPO' ,
+        parameters: {
+            $apply: 'groupby((loginTecnico))'
+			}}" search="_handleValueHelpSearchLoginTecCadToa"
+		confirm="_handleValueHelpLoginTecCadToa" cancel="_handleValueHelpCloseLoginTecCadToa" resizable="true" draggable="true" growing="true" growingThreshold="50">
+		<StandardListItem iconDensityAware="false" iconInset="false" title="{loginTecnico}" description="{loginTecnico}"/>
+	</SelectDialog>
+</core:FragmentDefinition>
+

@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleSortDialogConfirm">
+		<sortItems>
+			<ViewSettingsItem text="Grupo" key="grupo" />
+			<ViewSettingsItem text="Cluster" key="cluster" />
+			<ViewSettingsItem text="Subcluster" key="grupo" />
+			<ViewSettingsItem text="Município" key="subCluster" />
+			<ViewSettingsItem text="Segmento do Município" key="segMunicipio" />
+			<ViewSettingsItem text="Grupo de Serviços" key="grupoServicos" />
+			<ViewSettingsItem text="Fornecedor" key="fornecedor" />
+			<ViewSettingsItem text="Unidade Negócio" key="unidadeNegocio" />
+			<ViewSettingsItem text="Login Técnico" key="loginTecnico" />
+		</sortItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

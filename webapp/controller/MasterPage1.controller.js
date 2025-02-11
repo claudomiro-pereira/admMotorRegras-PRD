@@ -164,6 +164,8 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
                     this.doNavigate("DetailPage8_copy", oBindingContext, fnResolve, "");
                 }else if (oEvent.getSource().getTitle() == "Fornecedores Bloqueados") {
                     this.doNavigate("DetailPage8_fornec", oBindingContext, fnResolve, "");
+                }else if(oEvent.getSource().getTitle() == "Cadastro TOA"){
+                    this.doNavigate("DetailCadastroToa", oBindingContext, fnResolve, "");
                 }
             }.bind(this)).catch(function (err) {
                 if (err !== undefined) {
@@ -333,6 +335,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
                     },{
                         mainText:"Fornecedores Bloqueados",
                         subText: "Baixas realizada por Fornecedor"
+                    },{
+                        mainText:"Cadastro TOA",
+                        subText: "Cadastro de Filtros TOA"
                     },
 
                 ]

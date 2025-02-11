@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog id="List" title="Município" class="sapUiPopupWithPadding" items="{ path: '/Regioes' ,
+        parameters: {
+            $apply: 'groupby((municipio/descrMunicipio))'
+			}}" search="_handleValueHelpSearchMunicipio"
+		confirm="_handleValueHelpMunicipioCadToa" cancel="_handleValueHelpCloseMunicipioCadToa" resizable="true" draggable="true" growing="true" growingThreshold="50">
+		<StandardListItem iconDensityAware="false" iconInset="false" title="{municipio/descrMunicipio}" description="{municipio/descrMunicipio}"/>
+	</SelectDialog>
+</core:FragmentDefinition>
